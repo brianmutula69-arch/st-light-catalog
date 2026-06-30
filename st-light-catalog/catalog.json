@@ -1,1 +1,62 @@
-
+{
+  "categories": [
+    {
+      "name": "Solar",
+      "icon": "☀",
+      "image": "images/solar/category.jpg",
+      "items": [
+        {
+          "id": "solar001",
+          "name": "Solar Floodlight 400W",
+          "image": "images/solar/floodlight400.jpg"
+        },
+        {
+          "id": "solar002",
+          "name": "Solar Panel 200W",
+          "image": "images/solar/panel200.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Lighting",
+      "icon": "💡",
+      "image": "images/lighting/category.jpg",
+      "items": [
+        {
+          "id": "light001",
+          "name": "LED Bulb 12W",
+          "image": "images/lighting/bulb12w.jpg"
+        },
+        {
+          "id": "light002",
+          "name": "Ceiling Light",
+          "image": "images/lighting/ceiling-light.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Electrical",
+      "icon": "🔌",
+      "image": "images/electrical/category.jpg",
+      "items": [
+        {
+          "id": "ele001",
+          "name": "Extension Socket",
+          "image": "images/electrical/socket.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Batteries",
+      "icon": "🔋",
+      "image": "images/batteries/category.jpg",
+      "items": [
+        {
+          "id": "bat001",
+          "name": "200Ah Deep Cycle Battery",
+          "image": "images/batteries/200ah.jpg"
+        }
+      ]
+    }
+  ]
+}
