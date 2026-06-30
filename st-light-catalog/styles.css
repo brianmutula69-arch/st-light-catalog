@@ -1,1 +1,461 @@
+/* ==========================================
+   ST LIGHT Digital Catalogue
+   Version: 1.0
+   ========================================== */
 
+:root{
+
+    --primary:#F7941D;
+    --primary-dark:#D97800;
+
+    --secondary:#17324D;
+
+    --bg:#F7F8FA;
+
+    --card:#FFFFFF;
+
+    --text:#2C2C2C;
+
+    --light:#777;
+
+    --border:#E8E8E8;
+
+    --radius:18px;
+
+    --shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    height:320px;
+
+    background:url("assets/hero.jpg") center center/cover no-repeat;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+.hero p{
+
+    color:white;
+
+    opacity:.95;
+
+    margin-top:8px;
+
+    margin-bottom:25px;
+
+}
+
+.search-box{
+
+    width:100%;
+
+    max-width:450px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:40px;
+
+    outline:none;
+
+    font-size:16px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ================= CONTENT ================= */
+
+main{
+
+    padding:30px 20px 120px;
+
+}
+
+/* CATEGORY GRID */
+
+#categories{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+}
+
+/* CATEGORY CARD */
+
+.category{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.category:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.category img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.category-info{
+
+    padding:20px;
+
+}
+
+.category-info h2{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.category-info p{
+
+    color:var(--light);
+
+}
+
+/* ================= PRODUCT GRID ================= */
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:22px;
+
+    margin-top:25px;
+
+}
+
+.product{
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.product:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.product img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.product h3{
+
+    padding:15px;
+
+    font-size:18px;
+
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal-content{
+
+    background:white;
+
+    width:92%;
+
+    max-width:650px;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.modal img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+}
+
+#closeModal{
+
+    position:absolute;
+
+    right:20px;
+
+    top:12px;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+}
+
+.modal button{
+
+    padding:14px 24px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+#favoriteProduct{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+#shareProduct{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+/* ================= BOTTOM NAVIGATION ================= */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:72px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -2px 20px rgba(0,0,0,.08);
+
+}
+
+.bottom-nav button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+.bottom-nav button:hover{
+
+    color:var(--primary);
+
+}
+
+.bottom-nav span{
+
+    margin-top:4px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero{
+
+    height:260px;
+
+}
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+.category img{
+
+    height:180px;
+
+}
+
+.product img{
+
+    height:180px;
+
+}
+
+.modal-content{
+
+    width:96%;
+
+}
+
+}
