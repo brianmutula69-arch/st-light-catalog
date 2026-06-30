@@ -283,3 +283,10 @@ function handleRouting() {
         renderProducts(category);
     }
 }
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("ST LIGHT PWA Ready"))
+            .catch(err => console.log("SW failed", err));
+    });
+}
